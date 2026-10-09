@@ -1,4 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Rasi Bintang - Ghea</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:40px;max-width:600px;margin:auto;">
+
+<h1>✨ Rasi Bintang - Ghea</h1>
+
+<p>
+Terima kasih sudah mendukung Ghea! 💜
+</p>
+
+<p>
+Tulis namamu dan jangan lupa mention
+<b>@rzmkazet</b> di Instagram untuk menunjukkan lagu yang kamu dapatkan.
+</p>
+
+<p>
+🎁 Gheanks yang beruntung akan mendapatkan hadiah spesial.
+</p>
+
+<input type="text" id="nama" placeholder="Tulis namamu" style="padding:10px;width:80%;max-width:300px;">
+
+<br><br>
+
+<button onclick="getSong()" style="padding:12px 24px;font-size:16px;">
+🎵 Lihat Lagu Saya
+</button>
+
 <script>
+function getSong(){
+
 const songs = [
     "https://music.youtube.com/watch?v=PgynbV-__AY&si=3EF1MCqpaMOkdf1j",
     "https://music.youtube.com/watch?v=ASyHtBqhuAM&si=m0nCEvQyFxoS2St2",
@@ -11,12 +44,13 @@ const songs = [
     "https://music.youtube.com/watch?v=V6cQ4LyvOgg&si=oyDbB9nkZ7eGVi2S"
 ];
 
-let assignedSong = localStorage.getItem("rasi_bintang_song");
+const randomSong = songs[Math.floor(Math.random()*songs.length)];
 
-if (!assignedSong) {
-    assignedSong = songs[Math.floor(Math.random() * songs.length)];
-    localStorage.setItem("rasi_bintang_song", assignedSong);
+window.location.href = randomSong;
 }
+</script>
 
+</body>
+</html>
 window.location.replace(assignedSong);
 </script>
